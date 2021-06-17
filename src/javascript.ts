@@ -112,7 +112,7 @@ export const tsxLanguage = javascriptLanguage.configure({dialect: "jsx ts"})
 
 /// JavaScript support. Includes [snippet](#lang-javascript.snippets)
 /// completion.
-export function javascript(config: {jsx?: boolean, typescript?: boolean} = {}) {
+export function cherry(config: {jsx?: boolean, typescript?: boolean} = {}) {
   let lang = config.jsx ? (config.typescript ? tsxLanguage : jsxLanguage)
     : config.typescript ? typescriptLanguage : javascriptLanguage
   return new LanguageSupport(lang, javascriptLanguage.data.of({
