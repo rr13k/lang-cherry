@@ -1,19 +1,18 @@
 {
-  "name": "@codemirror/lang-javascript",
-  "version": "0.18.0",
-  "description": "JavaScript language support for the CodeMirror code editor",
+  "name": "codemirror-lang-cherry",
+  "version": "1.0.0",
+  "description": "cherry language support for the CodeMirror code editor",
   "scripts": {
     "test": "cm-runtests",
     "prepare": "cm-buildhelper src/index.ts"
   },
   "keywords": [
-    "editor",
-    "code"
+    "codemirror",
+    "cherry"
   ],
   "author": {
-    "name": "Marijn Haverbeke",
-    "email": "marijnh@gmail.com",
-    "url": "http://marijnhaverbeke.nl"
+    "name": "renran",
+    "email": "1114802403@qq.com"
   },
   "type": "module",
   "main": "dist/index.cjs",
@@ -40,6 +39,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/codemirror/lang-javascript.git"
+    "url": "https://github.com/rr13k/lang-cherry.git"
   }
 }
