@@ -10,3 +10,5 @@ package-lock.json
 /src/*.d.ts.map
 .tern-*
 yarn.lock
+
+yarn-error.log
