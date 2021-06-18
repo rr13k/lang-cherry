@@ -4,3 +4,5 @@
 .tern-*
 rollup.config.js
 tsconfig.json
+
+/demo

@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig-base.json",
+  "files": ["demo/demo.ts","src/index.ts"],
+  "references": [
+    // {
+    //   "path": "./src"
+    // }
+    // {
+    //   "path": "./packages/animals"
+    // },
+    // {
+    //   "path": "./packages/zoo"
+    // }
+  ]
+}

@@ -37,5 +37,11 @@ export const snippets: readonly Completion[] = [
     label: "import",
     detail: "default",
     type: "keyword"
+  }),
+
+  snip("await ", {
+    label: "await",
+    detail: "",
+    type: "keyword"
   })
 ]
