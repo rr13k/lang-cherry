@@ -43,5 +43,50 @@ export const snippets: readonly Completion[] = [
     label: "await",
     detail: "",
     type: "keyword"
-  })
+  }),
+  snip("async ", {
+    label: "async",
+    detail: "",
+    type: "keyword"
+  }),
+
+  snip("execJavaScript(`${}`) ", {
+    label: "execJavaScript",
+    detail: "",
+    type: "method"
+  }),
+  snip("sleep(${}) ", {
+    label: "sleep(ms)",
+    info:function sleep(){
+      let hint = document.createElement('span')
+      hint.style.fontSize = '12px'
+      hint.style.color = 'rgb(148 148 148)'
+      hint.innerText = '# 休眠(ms)'
+      return hint
+    },
+    detail: ":void",
+    type: "method"
+  }),
+ 
+  snip("hint(`${}`) ", {
+    label: "hint",
+    info:"提示信息",
+    detail: "",
+    type: "method"
+  }),
+
+  snip("page${}", {
+    label: "page",
+    info:"class",
+    detail: "",
+    type: "class"
+  }),
+
+  snip("page.to(`${}`)", {
+    label: "page.to",
+    info:"to(url:string)",
+    detail: "",
+    type: "method"
+  }),
+
 ]

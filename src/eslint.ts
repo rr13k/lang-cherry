@@ -1,7 +1,7 @@
 import {Diagnostic} from "@codemirror/lint"
 import {Text} from "@codemirror/state"
 import {EditorView} from "@codemirror/view"
-import {javascriptLanguage} from "./javascript"
+import {javascriptLanguage} from "./cherry"
 
 /// Connects an [ESLint](https://eslint.org/) linter to CodeMirror's
 /// [lint](#lint) integration. `eslint` should be an instance of the

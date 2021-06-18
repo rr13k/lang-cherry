@@ -2,8 +2,11 @@
 
 # @codemirror/lang-cherry
 
+
+
 ## push to npm 
 
 ```shell
+  npm run prepare
   npm publish
 ```
