@@ -4,5 +4,9 @@ package-lock.json
 /test/*.js
 /test/*.d.ts
 /test/*.d.ts.map
+
+/src/*.js
+/src/*.d.ts
+/src/*.d.ts.map
 .tern-*
 yarn.lock
