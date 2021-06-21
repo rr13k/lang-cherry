@@ -1,6 +1,6 @@
 {
   "name": "codemirror-lang-cherry",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "cherry language support for the CodeMirror code editor",
   "scripts": {
     "test": "cm-runtests",
