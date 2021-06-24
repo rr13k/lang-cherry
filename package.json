@@ -1,6 +1,6 @@
 {
   "name": "codemirror-lang-cherry",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "cherry language support for the CodeMirror code editor",
   "scripts": {
     "test": "cm-runtests",
@@ -30,6 +30,7 @@
     "@codemirror/language": "^0.18.0",
     "@codemirror/lint": "^0.18.0",
     "@codemirror/state": "^0.18.0",
+    "lezer-javascript": "^0.13.0",
     "@codemirror/view": "^0.18.0"
   },
   "devDependencies": {
@@ -42,7 +43,6 @@
     "ts-loader": "^9.2.3",
     "html-webpack-plugin": "^5.3.1",
     "@codemirror/basic-setup": "^0.18.2",
-    "lezer-javascript": "^0.13.0",
     "tsconfig-paths-webpack-plugin": "^3.5.1"
   },
   "repository": {
