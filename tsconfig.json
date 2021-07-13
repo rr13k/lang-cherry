@@ -1,6 +1,9 @@
 {
   "extends": "./tsconfig-base.json",
-  "files": ["demo/demo.ts","src/index.ts"],
+  "files": ["demo/demo.ts"],
+  "include": [
+    "src/**/*"
+  ],
   "references": [
     // {
     //   "path": "./src"

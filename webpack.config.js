@@ -9,6 +9,7 @@ module.exports = {
     open: true,
     port: 9000,
     compress: true,
+    host:"127.0.0.1",
     hot: true,
     inline: true,
   },
