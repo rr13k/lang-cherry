@@ -13,6 +13,13 @@ export const  domSnippet : readonly Completion[] = [
         detail: "",
         type: "method"
       }),
+
+      snip("dom.exist(`${}`)", {
+        label: "dom.exist",
+        info: "exist(sign:string)",
+        detail: "",
+        type: "method"
+      }),
     
       snip("dom.getByText(`${}`)", {
         label: "dom.getByText",

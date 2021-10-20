@@ -28,9 +28,17 @@ export const commonSnippet: readonly Completion[] = [
 
     snip("hint(`${}`) ", {
         label: "hint",
-        info: "提示信息",
+        info: "hit(text:string,type:string)",
         detail: "",
         type: "method"
     }),
+
+    snip("getDoms(`${}`) ", {
+        label: "getDoms",
+        info: "getDoms(sign:string,index:int)",
+        detail: "",
+        type: "method"
+    }),
+
 
 ]
