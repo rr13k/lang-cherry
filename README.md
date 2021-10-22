@@ -10,3 +10,10 @@
   npm run prepare
   npm publish
 ```
+
+
+## 注意
+
+This sometimes happens because multiple instances of @codemirror/state
+
+打包后不能直接合并
