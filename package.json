@@ -1,6 +1,6 @@
 {
   "name": "codemirror-lang-cherry",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "cherry language support for the CodeMirror code editor",
   "scripts": {
     "test": "cm-runtests",
@@ -25,25 +25,17 @@
   "sideEffects": false,
   "license": "MIT",
   "dependencies": {
-    "@codemirror/autocomplete": "^0.18.0",
-    "@codemirror/highlight": "^0.18.0",
-    "@codemirror/language": "^0.18.0",
-    "@codemirror/lint": "^0.18.0",
-    "@codemirror/state": "^0.18.0",
-    "lezer-javascript": "^0.13.0",
-    "@codemirror/view": "^0.18.0"
+    "@codemirror/autocomplete": "^0.19.0",
+    "@codemirror/highlight": "^0.19.6",
+    "@codemirror/language": "^0.19.0",
+    "@codemirror/lint": "^0.19.0",
+    "@codemirror/state": "^0.19.0",
+    "@codemirror/view": "^0.19.0",
+    "@lezer/javascript": "^0.15.0"
   },
   "devDependencies": {
     "@codemirror/buildhelper": "^0.1.5",
-    "lezer": "^0.13.0",
-    "webpack": "^5.39.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.2",
-
-    "ts-loader": "^9.2.3",
-    "html-webpack-plugin": "^5.3.1",
-    "@codemirror/basic-setup": "^0.18.2",
-    "tsconfig-paths-webpack-plugin": "^3.5.1"
+    "@lezer/lr": "^0.15.0"
   },
   "repository": {
     "type": "git",

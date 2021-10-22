@@ -1,5 +1,5 @@
-import {parser} from "lezer-javascript"
-import {LezerLanguage, LanguageSupport,
+import {parser} from "@lezer/javascript"
+import {LRLanguage, LanguageSupport,
         delimitedIndent, flatIndent, continuedIndent, indentNodeProp,
         foldNodeProp, foldInside} from "@codemirror/language"
 import {styleTags, tags as t} from "@codemirror/highlight"
@@ -9,12 +9,12 @@ import {snippets} from "./snippets"
 /// A language provider based on the [Lezer JavaScript
 /// parser](https://github.com/lezer-parser/javascript), extended with
 /// highlighting and indentation information.
-export const javascriptLanguage = LezerLanguage.define({
+export const javascriptLanguage = LRLanguage.define({
   parser: parser.configure({
     props: [
       indentNodeProp.add({
         IfStatement: continuedIndent({except: /^\s*({|else\b)/}),
-        TryStatement: continuedIndent({except: /^\s*({|catch|finally)\b/}),
+        TryStatement: continuedIndent({except: /^\s*({|catch\b|finally\b)/}),
         LabeledStatement: flatIndent,
         SwitchBody: context => {
           let after = context.textAfter, closed = /^\s*\}/.test(after), isCase = /^\s*(case|default)\b/.test(after)
@@ -26,11 +26,11 @@ export const javascriptLanguage = LezerLanguage.define({
         "Statement Property": continuedIndent({except: /^{/}),
         JSXElement(context) {
           let closed = /^\s*<\//.test(context.textAfter)
-          return context.lineIndent(context.state.doc.lineAt(context.node.from)) + (closed ? 0 : context.unit)
+          return context.lineIndent(context.node.from) + (closed ? 0 : context.unit)
         },
         JSXEscape(context) {
           let closed = /\s*\}/.test(context.textAfter)
-          return context.lineIndent(context.state.doc.lineAt(context.node.from)) + (closed ? 0 : context.unit)
+          return context.lineIndent(context.node.from) + (closed ? 0 : context.unit)
         },
         "JSXOpenTag JSXSelfClosingTag"(context) {
           return context.column(context.node.from) + context.unit
@@ -82,14 +82,14 @@ export const javascriptLanguage = LezerLanguage.define({
         TypeName: t.typeName,
         TypeDefinition: t.definition(t.typeName),
         "type enum interface implements namespace module declare": t.definitionKeyword,
-        "abstract global privacy readonly": t.modifier,
+        "abstract global privacy readonly override": t.modifier,
         "is keyof unique infer": t.operatorKeyword,
 
-        JSXAttributeValue: t.string,
+        JSXAttributeValue: t.attributeValue,
         JSXText: t.content,
         "JSXStartTag JSXStartCloseTag JSXSelfCloseEndTag JSXEndTag": t.angleBracket,
         "JSXIdentifier JSXNameSpacedName": t.tagName,
-        "JSXAttribute/JSXIdentifier JSXAttribute/JSXNameSpacedName": t.propertyName
+        "JSXAttribute/JSXIdentifier JSXAttribute/JSXNameSpacedName": t.attributeName
       })
     ]
   }),
