@@ -39,6 +39,34 @@ export const commonSnippet: readonly Completion[] = [
         detail: "",
         type: "method"
     }),
-
-
+    snip("openDevTools(`${}`) ", {
+        label: "openDevTools",
+        info: "openDevTools()",
+        detail: "",
+        type: "method"
+    }),
+    snip("closeDevTools(`${}`) ", {
+        label: "closeDevTools",
+        info: "closeDevTools()",
+        detail: "",
+        type: "method"
+    }),
+    snip("log(`${}`) ", {
+        label: "log",
+        info: "log(level:LoggerLevel,text:string)",
+        detail: "",
+        type: "method"
+    }),
+    snip("clearCookie(`${}`) ", {
+        label: "clearCookie",
+        info: "clearCookie()",
+        detail: "",
+        type: "method"
+    }),
+    snip("setDeviceEmulation(`${}`) ", {
+        label: "setDeviceEmulation",
+        info: "setDeviceEmulation({screenPosition,screenSize,viewPosition,deviceScaleFactor,viewSize,scale})",
+        detail: "",
+        type: "method"
+    }),
 ]
