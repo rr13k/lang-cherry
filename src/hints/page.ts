@@ -14,6 +14,13 @@ export const  pageSnippet : readonly Completion[]= [
     type: "method"
   }),
 
+  snip("page.getURL(`${}`)", {
+    label: "page.getURL",
+    info: "getURL()",
+    detail: "",
+    type: "method"
+  }),
+
   snip("page.create(`${}`)", {
     label: "page.create",
     info: "create(url:string)",

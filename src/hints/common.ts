@@ -69,4 +69,16 @@ export const commonSnippet: readonly Completion[] = [
         detail: "",
         type: "method"
     }),
+    snip("cookies(`${}`)",{
+        label: "cookies",
+        info: "cookies(type,{url,name,value,domain,path,secure,httpOnly,expirationDate,sameSite}})",
+        detail: "",
+        type: "method"
+    }),
+    snip("clipboards(`${}`)",{
+        label: "clipboards",
+        info: "clipboards(type,text)",
+        detail: "",
+        type: "method"
+    }),
 ]
